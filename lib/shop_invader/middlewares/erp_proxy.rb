@@ -7,7 +7,7 @@ module ShopInvader
       def _call
         if env['steam.path'].start_with?('invader/')
           path = env['steam.path'].sub('invader/', '')
-          response = erp.call(env['REQUEST_METHOD'], path, params)
+          response = erp.call_without_parsing(env['REQUEST_METHOD'], path, params)
           # the check_payment path always need to render an html page
           # as this is the redirection done by the payment provider
           # if we have some other case with the same need maybe it will be

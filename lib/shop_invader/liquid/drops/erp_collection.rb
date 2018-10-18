@@ -27,7 +27,7 @@ module ShopInvader
             if @context['store_maintenance']
               @collection ||= {data: {}, size:0}
             elsif
-              @collection ||= fetch_collection[:data]
+              @collection ||= fetch_collection
             end
           end
           @collection
